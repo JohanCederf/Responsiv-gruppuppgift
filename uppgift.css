@@ -1,0 +1,210 @@
+
+body {
+    background-color: hsl(181, 100%, 25%);
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    width: 98%;
+    background-color: hsl(181, 61%, 16%);
+    margin: 1% 0.5%;
+}
+
+/*Sharifs kod*/
+header.Sh{
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid black; /*headerns kant får en svart färg*/
+    position: relative;
+    width: auto;
+    height: 100px;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 5s;
+    animation-name: example;
+    animation-duration: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: width 5s, height 5s, transform 5s;
+}
+h1.Sh{
+    padding: 8px 10px;
+    text-align: center;
+}
+h2.Sticky{
+    position: sticky;
+ top: 0;
+ padding: 10px;
+ border: 5px solid rgb(0, 0, 0);
+ text-align: center;
+ background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(184, 73, 22), #d6a253, rgb(255, 255, 255),#d6a253, rgb(184, 73, 22), rgb(0, 0, 0))
+}
+/*headerns storlek och färg förändras*/
+@keyframes example {
+    0%{
+        background-color:   rgb(255,255,255);
+        width: 100vw;
+        left: 0vw;
+    }
+    25%{
+        background-color: hsl(0, 55%, 43%);
+        width: 75vw;
+        left: 0vw;
+        font-size: 90%;
+    }
+    50%{
+        background-color: hsl(0, 100%, 35%);
+        width: 50vw;
+        left: 30vw;
+        font-size: 75%;
+    }
+    75%{
+        background-color: hsl(0, 55%, 43%);
+        width: 30vw;
+        left: 30vw;
+        font-size: 60%;
+    }
+    100%{
+        background-color: hsl(0, 0%, 100%);
+        width: 30vw;
+        left: 30vw;
+        font-size: 50%;
+    }
+} 
+img {
+    float: right;
+    margin: 5px;
+    width: auto;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    transition: width 5s, height 5s, transform 5s; 
+}
+/*bilden snurrar*/
+img:hover {
+    width: 620px;
+    height: 413px;
+    transform: rotate(180deg);
+    transform: rotateX(0), rotateY(120deg), rotateZ(0);
+}
+p.Sh {
+    text-align: justify;
+}
+footer.Sh {
+    height: 75px;
+    width: auto;
+    background-image: linear-gradient(to right, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%); 
+}
+#container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; 
+}
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px;
+}
+ 
+ 
+
+
+
+/*footern (Alban)*/
+footer{
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color:hsl(181, 61%, 16%);
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/*transition och transform kuben*/
+aside{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transition: transform 2s;
+}
+aside:hover{
+    transform: rotate(1080deg);
+}
+.responsive{
+    max-width: 100%;
+    height: auto;
+} 
+
+
+
+/*Tabell(Johan)*/
+table, th, td {
+    border: solid;
+    border-width: 2px;
+    border-collapse: separate;
+    margin: 5px;
+    padding: 5px;
+    border-color: rgb(0, 0, 0);
+}
+
+th, td {
+    text-align: center;
+    color: rgb(238, 223, 223);
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*Ändrar tabellen storlek*/
+@media screen and (max-width: 600px){
+    th, td{
+        font-size: 13px;
+        padding: 2px;
+    }
+    video.Jc{
+        height: 200px;
+        width:300px;
+    }
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Ger varanan rad en egen färg till tabell*/
+table#t01 th {
+    background-color: hsl(111, 59%, 33%);
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #d85d0b;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: hsl(111, 59%, 33%);
+}
+
+table {
+    border-radius: 28px;
+    background-color: hsl(167, 81%, 29%);
+
+}
+video.Jc{
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    height: 400px;
+    width: 600px;
+}
+audio.Jc{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
