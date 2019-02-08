@@ -33,13 +33,13 @@ h1.Sh{
     padding: 8px 10px;
     text-align: center;
 }
-h2.Sticky{
+h2.sticky{
     position: sticky;
  top: 0;
  padding: 10px;
  border: 5px solid rgb(0, 0, 0);
  text-align: center;
- background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(184, 73, 22), #d6a253, rgb(255, 255, 255),#d6a253, rgb(184, 73, 22), rgb(0, 0, 0))
+ background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(184, 73, 22), #d6a253, rgb(255, 255, 255),#d6a253, rgb(184, 73, 22), rgb(0, 0, 0));
 }
 /*headerns storlek och färg förändras*/
 @keyframes example {
