@@ -5,7 +5,10 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
 }
-
+body.Al{
+    background-image: linear-gradient(to right,red,green,orange,blue,indigo,cyan);
+}
+ 
 header {
     text-align: center;
     padding: 10px;
@@ -14,6 +17,56 @@ header {
     margin: 1% 0.5%;
 }
 
+/*Zaki kod*/
+h1.Za{
+    text-align: center;
+    color: white;
+}
+/*bilden får runda kanter*/
+picture>img{
+    border-radius: 40px;
+    width:auto;
+    margin:2px;
+}
+image.Za{
+    max-width: 100%;
+    height: auto;
+}
+/*Animationen header*/
+@keyframes ColorSwap{
+    from{
+        background-color: rgba(1, 7, 14, 0.486);
+    }
+    to{
+        background-color: rgba(252, 249, 251, 0.26);
+    }
+}
+div.Za{
+    margin:10px;
+    padding: 0;
+    border: 1px solid rgb(33, 94, 83);
+    background-color: rgb(107, 107, 80);
+    animation-name:ColorSwap;
+    animation-duration:6s;   
+    animation-iteration-count: infinite;
+}
+
+footer.Za {
+    text-align:center;
+    background-image: linear-gradient(to right, rgb(186, 241, 97) , rgb(16, 68, 165), rgb(194, 181, 68) );
+    height: 30px;
+    width: 100%;
+    margin-top: 50px;
+}
+h3{
+    color:white;
+}
+aside.Za {
+    float:right;
+    margin:15px;
+ } 
+ 
+
 /*Sharifs kod*/
 header.Sh{
     background-color: hsl(0, 0%, 100%);
@@ -21,10 +74,8 @@ header.Sh{
     position: relative;
     width: auto;
     height: 100px;
-    -webkit-animation-name: example;
-    -webkit-animation-duration: 5s;
     animation-name: example;
-    animation-duration: infinite;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     transition: width 5s, height 5s, transform 5s;
@@ -73,7 +124,7 @@ h2.sticky{
         font-size: 50%;
     }
 } 
-img {
+img.Sh {
     float: right;
     margin: 5px;
     width: auto;
@@ -83,14 +134,17 @@ img {
     transition: width 5s, height 5s, transform 5s; 
 }
 /*bilden snurrar*/
-img:hover {
+img.Sh:hover {
     width: 620px;
     height: 413px;
     transform: rotate(180deg);
-    transform: rotateX(0), rotateY(120deg), rotateZ(0);
+    transform: rotateX(0) rotateY(120deg) rotateZ(0);
 }
 p.Sh {
     text-align: justify;
+}
+iframe{
+    border: none;
 }
 footer.Sh {
     height: 75px;
@@ -112,12 +166,77 @@ footer.Sh {
     border: 2px;
 }
  
+
+/*Navigering menyn(Alban)*/
+ul{
+    list-style: none;
+    max-width: 100%;
+    margin: 0;
+   
+}
+.hej{
  
+    background-color: rgb(64, 224, 208);
+    max-width: 100%;
+    margin:0;
+    padding:0;
+}
+ 
+a{
+    display:block;
+    text-decoration: none;
+    background-color:hsl(174, 72%, 56%);
+    padding: 20px; /*Behöver den vara 50?*/
+    color:rgb(255, 255, 255);
+    width: 100%;
+}   
+a:hover{
+    background-color:hsl(174, 72%, 56%);
+}
+li{
+    margin: 0;
+    display: inline-block;
+   
+}
+nav{
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+a:active{
+    background-color: #40e0d0;
+    color: rgb(255, 255, 0)
+}
+.active{
+    background-color:#40e0d0;
+    color: rgb(255,0,0);
+}
 
+/*dropdown menyn*/
+.dropdown{
+    display: inline-block;
+    position: relative; /*Relative... bug*/
+}
 
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 
-/*footern (Alban)*/
-footer{
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+ 
+@media screen and (max-width: 900px) {
+    nav{
+       max-width: 100%;
+        height: auto;
+    }
+}
+
+/*footer*/
+footer.Al{
     margin-top: 10%;
     margin-left: 30%;
     margin-right: 30%;
@@ -126,15 +245,15 @@ footer{
     text-align: center;
     color: white;
 }
-
+ 
 /*transition och transform kuben*/
-aside{
+aside.Al{
     background-color: red;
     width: 100px;
     height: 100px;
     transition: transform 2s;
 }
-aside:hover{
+aside.Al:hover{
     transform: rotate(1080deg);
 }
 .responsive{
@@ -160,7 +279,19 @@ th, td {
     font-size: 20px;
     padding: 10px;
 }
-
+/*Audio och video*/
+video.Jc{
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    height: 400px;
+    width: 600px;
+}
+audio.Jc{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 /*Ändrar tabellen storlek*/
 @media screen and (max-width: 600px){
     th, td{
@@ -169,7 +300,7 @@ th, td {
     }
     video.Jc{
         height: 200px;
-        width:300px;
+        width: 300px;
     }
 }
 table.center {
@@ -195,16 +326,5 @@ table {
     background-color: hsl(167, 81%, 29%);
 
 }
-video.Jc{
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-    height: 400px;
-    width: 600px;
-}
-audio.Jc{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
+
 
